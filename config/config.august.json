@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-august-api-key": "79fd0eb6-381d-4adf-95a0-47721289d1d9",
+    "x-kease-api-key": "79fd0eb6-381d-4adf-95a0-47721289d1d9",
+    "Content-Type": "application/json",
+    "Accept-Version": "0.0.1",
+    "User-Agent": "August/Luna-3.2.2",
+    "x-august-access-token": "<YOURS>"
+  },
+  "urls": {
+    "session": "https://api-production.august.com/session",
+    "locks": "https://api-production.august.com/users/locks/mine",
+    "lockStatus": "https://api-production.august.com/remoteoperate/<LOCKID>/status",
+    "lock": "https://api-production.august.com/remoteoperate/<LOCKID>/lock",
+    "unlock": "https://api-production.august.com/remoteoperate/<LOCKID>/unlock"
+  }
+}
