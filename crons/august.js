@@ -23,5 +23,8 @@ module.exports = (startupCheck = false) => {
       } else if (startupCheck) {
         console.log('Startup Connection Check: Successfully connected to August. isLocked', body.status === LOCKED);
       }
-  }); 
+  })
+  .catch(err => {
+    console.log('Error occured connecting to August lock', err);
+ });
 };
