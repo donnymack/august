@@ -1,5 +1,5 @@
 FROM node:8
-WORKDIR /var/apps/august/
+WORKDIR /var/apps/august/index.js
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
