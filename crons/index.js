@@ -6,4 +6,4 @@ const CronJob = cron.CronJob;
 new CronJob('30 19-7 * * *', () => {
   augustLock();
 }, null, true, 'America/Los_Angeles');
-//  augustLock(); // test.
+ augustLock(true); // test.
