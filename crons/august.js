@@ -11,6 +11,7 @@ module.exports = (startupCheck = false) => {
     .then((data) => {
       const { body } = data;
       if (body.status === LOCKED) {
+        if (startupCheck) console.log('Startup Connection Check: Successfully connected to August. isLocked', body.status === LOCKED);
         console.log('Door is already locked. No action taken.');
       } else if (body.status === UNLOCKED && !startupCheck) {
         console.log('Door is unlocked. Locking door. Action taken.');
@@ -19,7 +20,10 @@ module.exports = (startupCheck = false) => {
           .set(August.headers)
           .then((data) => {
             console.log('Door locked successfully.');
-        });
+        })
+        .catch(err => {
+          console.log('Error occured locking August lock.', err);
+       });
       } else if (startupCheck) {
         console.log('Startup Connection Check: Successfully connected to August. isLocked', body.status === LOCKED);
       }
